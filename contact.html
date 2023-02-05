@@ -11,32 +11,31 @@
   <link rel="stylesheet" href="./content/app.css">
   <link rel="stylesheet"  href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
-  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <header><nav class="navbar navbar-expand-lg  bg-body-tertiary navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="./index.html"> <i class="fa-solid fa-masks-theater"></i> WEBD6201</a>
+    <a class="navbar-brand" href="./index.html"> <i class="fa-solid fa-cube"></i> WEBD6201</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="./index.html"><i class="fa-solid fa-house"></i></i> Home</a>
+          <a class="nav-link " href="./index.html"><i class="fa-solid fa-house-user"></i> Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./products.html"><i class="fa-solid fa-gift"></i> Product</a>
+          <a class="nav-link" href="./products.html"><i class="fa-brands fa-product-hunt"></i> Product</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./services.html"><i class="fa-solid fa-handshake"></i> Services</a>
+          <a class="nav-link " href="./services.html"><i class="fa-regular fa-handshake"></i> Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./about.html"><i class="fa-solid fa-user-tie"></i> About Us</a>
+          <a class="nav-link" href="../about.html"><i class="fa-solid fa-address-card"></i> About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link "  href="./contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a>
+          <a class="nav-link  active" aria-current="page"  href="./contact.html"><i class="fa-solid fa-address-book"></i> Contact Us</a>
         </li>
       </ul>
     </div>
@@ -44,8 +43,49 @@
 </nav></header>
 <div class="container" >
   <h1> Contact Us </h1>
+
+  <div class="row justify-content-lg-center g-3">
+    <form class = "col-lg-6 col-md-6 col-sm-6">
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Full Name</span>
+        <input type="text" name="fullName" class="form-control" id="fullName"
+               aria-describedby="Full Name Input" aria-label="Full Name Input" required>
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Contact Number</span>
+        <input type="tel" name="contactNumber" class="form-control" id="contactNumber"
+               aria-describedby="Contact Number Input" aria-label="Contact Number Input" required>
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Email address</span>
+        <input type="email" name="emailAddress" class="form-control" id="emailAddress"
+               aria-describedby="Email Address Input" aria-label="Email Address Input" required>
+
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="subscribeCheckbox">
+        <label class="form-check-label" for="subscribeCheckbox">Subscribe to our Contact list</label>
+      </div>
+      <button id="sendButton" type="submit" class="btn btn-primary"><i class="fas fa-envelope"></i>Send</button>
+      <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fas fa-undo"></i>Reset</button>
+    </form>
+
+    <div class="col-lg-4 col-mg-4">
+      <a href="contact-list.html" class="btn btn-primary btn-lg"><i class="fas fa-users fa-lg"></i>Show Contact List</a>
+
+    </div>
+
+  </div>
 </div>
 <!-- Javascript selection-->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./scripts/namespace.js"></script>
 <script src="./scripts/app.js"></script>
+<script src="./scripts/contact.js"></script>
 </body>
 </html>
