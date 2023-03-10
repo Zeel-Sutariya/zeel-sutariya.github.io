@@ -1,11 +1,12 @@
 {
-  "name": "Week6-2",
+  "name": "week9.1",
   "version": "1.0.0",
-  "description": "Repository for WEBD6201 - Week6",
   "main": "index.js",
-  "repository": "https://github.com/Zeel-Sutariya/WEBD6201-14724.git",
+
+  "repository": "https://github.com/Zeel-Sutariya/zeel-sutariya.github.io",
   "author": "Zeel Sutariya <zeel.sutariya@dcmail.ca>",
   "license": "MIT",
+  "description": "Repo for WebD 6201 week1",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
     "@popperjs/core": "^2.11.6",
