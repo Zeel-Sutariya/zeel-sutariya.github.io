@@ -1,2 +1,115 @@
-<h1 class="mb-5"> Welcome to home </h1>
-<button id="AboutUsBtn" class="btn btn-primary">About US</button>
+<section  id="myintro" class="py-5 name" style="color:#ffffff; ">
+    <h1 class="centered-section">I'm Zeel Sutariya.</h1>
+</section>
+
+<section id="about" class="py-5 aboutme" style="color:#ffffff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 margin-image animate__animated  animate__fadeInLeft">
+                <div class="animate__animated animate__fadeInUp">
+                    <h1 class="pos">Zeel</h1>
+                </div>
+                <div>
+                    <img src="dp/ZeelAvatarBlueZoom.png" alt="Profile Picture" class="img-fluid fade-out-overlay rounded-circle mb-4 about-image animate__animated animate__fadeIn">
+                </div>
+
+            </div>
+            <div class="col-md-6 margin animate__animated animate__fadeInUp">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at erat lorem. Curabitur eu tristique dui. Quisque suscipit, dolor vel tincidunt ullamcorper, metus neque commodo arcu, id aliquam nisl urna non erat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at erat lorem. Curabitur eu tristique dui. Quisque suscipit, dolor vel tincidunt ullamcorper, metus neque commodo arcu, id aliquam nisl urna non erat.</p>
+                <a href="#" class="btn btn-primary animate__animated animate__fadeIn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .name{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .aboutme{
+        height: 98vh;
+        display: flex;
+    }
+
+    .projects{
+        height: 99vh;
+        display: flex;
+    }
+
+    .centered-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .margin{
+        margin-top: 20vh;
+    }
+    .margin-image{
+        margin-top: 60vh;
+    }
+    .margin-less{
+        margin-top: 10vh;
+    }
+    .about-image {
+        max-width: 300px;
+        transition: opacity 0.3s ease;
+        box-shadow: -10px -10px 100px rgba(255, 255, 255, 0.7);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .pos{
+        position: absolute;
+        bottom: 110px;
+        left: 30px;
+        font-size: 110px;
+        font-family: "Cooper Black";
+    }
+
+    .fade-out-overlay {
+        width: 100%;
+        height: 280px; /* Adjust the height of the fade-out effect */
+        background: linear-gradient(to top left, rgba(255, 255, 255, 0), rgb(25, 199, 222));
+    }
+
+</style>
+<section id="projects" class="py-5 projects">
+    <div class="container margin-less">
+        <h2 style="color: white">Portfolio</h2>
+        <div class="row margin-less">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="projectsphoto/paycalculator.jpeg" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="projectsphoto/pizzashop.jpeg" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="projectsphoto/salescompany.jpeg" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
