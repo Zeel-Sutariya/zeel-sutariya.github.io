@@ -1,0 +1,412 @@
+@media (min-width: 700px) {
+
+    /* Container to hold the image */
+    .image-container {
+        position: relative;
+        width: 300px; /* Adjust the width to match your image size */
+        height: 280px; /* Adjust the height to match your image size */
+    }
+
+    /* The flipper container */
+    .image-flipper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.6s; /* Adjust the transition speed as needed */
+    }
+
+    /* Front of the image */
+    .image-front,
+    .image-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    /* Back of the image (hidden by default) */
+    .image-back {
+        transform: rotateY(180deg);
+        transform-origin: center; /* Flip in place around the center */
+    }
+
+    /* Style for the text on the backside */
+    .image-back p {
+        color: #fff;
+        font-size: 32px;
+        font-family: "Cooper Black";
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Style for the icon on the backside */
+    .icon-1{
+        color: #fff;
+        font-size: 24px;
+        position: absolute;
+        margin-top: 60%;
+        margin-left: 20%;
+        /*transform: translateX(-50%);*/
+    }.icon-2{
+        color: #fff;
+        font-size: 24px;
+        position: absolute;
+        margin-top: 60%;
+        margin-left: 35%;
+        /*transform: translateX(-50%);*/
+    }.icon-3{
+        color: #fff;
+        font-size: 24px;
+        position: absolute;
+        margin-top: 60%;
+        margin-left: 50%;
+        /*transform: translateX(-50%);*/
+    }
+
+    /* Hover effect */
+    .image-container:hover .image-flipper {
+        transform: rotateY(180deg);
+    }
+
+
+
+    .card {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card svg {
+        width: 48px;
+        fill: #333;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    .card__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:hover .card__content {
+        transform: rotateX(0deg);
+    }
+
+    .card__title {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: 700;
+    }
+
+    .card:hover svg {
+        scale: 0;
+    }
+
+    .card__description {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #777;
+        line-height: 1.4;
+    }
+
+
+    .fixed-button {
+        position: fixed;
+        top: 50%;
+
+        text-decoration: none;
+        right: 0px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .half-rounded-button {
+        margin-bottom: 10px;
+        margin-right: 0;
+        border: 3px solid white;
+        border-right: 0px;
+        outline: 30px white;
+        text-decoration: none;
+        padding: 10px 20px;
+        -webkit-margin-end: 0;
+        background-color: black;
+        border-radius: 20px 0px 0px 20px;
+        color: rgb(231, 226, 226);
+        cursor: pointer;
+
+    }
+
+    .nav-active {
+        /*border: 6px  solid gold;*/
+
+        margin: 5px 0px 15px 0px;
+        padding: 6px 20px;
+        background-color: white;
+        border-radius: 20px 0px 0px 20px;
+        font-weight: bold;
+        font-size: 23px;
+        color: black;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .fixed-button > a:hover {
+        /*border: 6px  solid gold;*/
+
+        margin: 5px 0px 15px 0px;
+        padding: 6px 20px;
+        background-color: white;
+        border-radius: 20px 0px 0px 20px;
+        font-weight: bold;
+        font-size: 23px;
+        color: black;
+        transition: box-shadow 3s ease-out;
+    }
+
+    .custom-cursor {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #5ee7d2;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        background-color: rgba(255, 255, 255, 0.13);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .custom-cursor::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    /* For Webkit browsers (Chrome, Safari) */
+    ::-webkit-scrollbar {
+        width: 6px; /* Adjust the width as desired */
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #888;
+    }
+
+
+    .name {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: 'Norican', cursive, sans-serif;
+    }
+
+    .aboutme {
+        height: 100vh;
+        width: 96%;
+        display: flex;
+    }
+
+    .projects {
+        height: 100vh;
+        width: 96%;
+        display: flex;
+    }
+
+
+
+    .margin {
+        margin-top: 20vh;
+    }
+
+    .margin-left {
+        margin-left: 30vh;
+    }
+
+    .margin-image {
+        margin-top: 60vh;
+    }
+
+    .margin-less {
+        margin-top: 10vh;
+    }
+
+    .margin-less-less
+    {
+        margin-top: 2vh;
+    }
+
+    .about-image {
+        max-width: 300px;
+        background-color: rgba(0, 0, 0, 0);
+        transition: opacity 0.3s ease;
+        box-shadow: -10px -10px 100px rgba(255, 255, 255, 0.7);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .pos {
+        position: absolute;
+        bottom: 100px;
+        left: 30px;
+        font-size: 110px;
+        font-family: "Cooper Black";
+    }
+
+    .fade-out-overlay {
+        width: 100%;
+        height: 280px; /* Adjust the height of the fade-out effect */
+        background: linear-gradient(to top left, rgba(255, 255, 255, 0), rgb(25, 199, 222));
+    }
+
+
+}
+
+@media (max-width: 700px) {
+
+    .fixed-button {
+        position: fixed;
+        margin: 0;
+        width: max-content ;
+        /*top:1%;*/
+        z-index: 4;
+        text-decoration: none;
+        /*right: 0px;*/
+        /*transform: translateY(-50%);*/
+        display: flex;
+        justify-content: space-around;
+
+        /*flex-direction: row;*/
+        background-color: rgba(138, 134, 134, 0.54);
+        /*opacity: 2%;*/
+
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: 5px 5px 20px rgba(128, 112, 112, 0.54);
+        align-items: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .half-rounded-button {
+        /*margin:0 5vw;*/
+        /*margin-left: 0;*/
+        /*border: 3px solid white;*/
+        /*border-right: 0px;*/
+        /*outline: 30px white;*/
+        text-decoration: none;
+        padding: 10px 20px;
+        /*-webkit-margin-end: 0;*/
+        background-color: black;
+        border-radius: 0px 0px 10px 10px;
+        color: rgb(231, 226, 226);
+        cursor: pointer;
+
+        box-shadow: 5px 5px 20px rgba(234, 178, 16, 0.88);
+
+        box-shadow: -0px -0px 20px rgba(234, 178, 16, 0.88);
+        visibility: hidden;
+
+    }
+
+    .nav-active {
+visibility: visible;
+   }
+
+    /*.fixed-button > a:hover {*/
+    /*    !*border: 6px  solid gold;*!*/
+
+    /*    margin: 5px 0px 15px 0px;*/
+    /*    padding: 6px 20px;*/
+    /*    background-color: white;*/
+    /*    border-radius: 20px 0px 0px 20px;*/
+    /*    font-weight: bold;*/
+    /*    font-size: 23px;*/
+    /*    color: black;*/
+    /*    transition: box-shadow 0.3s ease-in-out;*/
+    /*}*/
+.py-5{
+}
+#myintro{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Norican', cursive, sans-serif;
+
+}
+
+    .about-image {
+        max-width: 200px;
+        max-height: 200px;
+        transition: opacity 0.3s ease;
+        box-shadow: -10px -10px 100px rgba(255, 255, 255, 0.7);
+        position: relative;
+    }
+
+    .fade-out-overlay {
+        width: 100%;
+        height: 280px; /* Adjust the height of the fade-out effect */
+        background: linear-gradient(to top left, rgba(225, 225, 225, 0.1), rgb(25, 199, 222));
+    }
+
+    .pos {
+        bottom: 30%;
+        /*left: 30px;*/
+        font-size: 80px;
+        font-family: "Cooper Black";
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+body {
+    background-color: #202124;
+    cursor: none;
+    overflow: auto;
+
+}
+.centered-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

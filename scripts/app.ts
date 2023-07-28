@@ -341,6 +341,7 @@
             case "contact-list":return  DisplayContactListPage;
             case "edit":return DisplayEditPage;
             case "projects":return  DisplayProjectPage;
+            case "privacypolicy":return  DisplayProjectPage;
             case "register":return  DisplayRegisterPage;
             case "login":return  DisplayLoginPage;
             case "404":return  Display404;

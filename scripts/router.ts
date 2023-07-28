@@ -61,6 +61,7 @@ router.AddTable([
     "/edit",
     "/login",
     "/projects",
+    "/privacypolicy",
     "/register",
     "/services"
 ]);
