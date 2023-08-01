@@ -2,27 +2,19 @@
     <h1 class="centered-section">I'm Zeel Sutariya.</h1>
 </section>
 
-<!--<section id="about"  class="py-5 aboutme" style="color:#ffffff;">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-md-6 margin-image position-relative centered-section">-->
-<!--                <h1 class="pos">Zeel</h1>-->
-<!--                <img src="dp/ZeelAvatarBlueZoom.png" alt="Profile Picture" class="img-fluid mb-4 about-image fade-out-overlay rounded-circle">-->
+<section id="curve1" class="curve" style="">
+    <div class="graph__wrapper1">
+        <svg width="100%" height="100%" fill="#0f4675" style="overflow: visible;">
+            <path id="Path-4" class="" fill="#0f4675" stroke="#0f4675" stroke-width="5" stroke-linejoin="round" stroke-miterlimit="10" d="M0,40 L200,-250 L435,40 M328,40 L600,-500 L1050,40 M928,40 L1200,-250 L1540,40 M1395,-95 L1530,-400 L1530,500 L0,500 Z"/>
+            <path id="Path-4" class="" fill="none" stroke="#0f4675" stroke-width="5" stroke-linejoin="round"  stroke-miterlimit="10" d="M0,40 L200,-250 L400,0 M328,-95 L600,-500 L1000,0 M928,-95 L1200,-250 L1530,20 M1395,-95 L1530,-400"/>
+        </svg>
+    </div>
+</section>
 
-<!--            </div>-->
-<!--            <div class="col-md-6 margin animate__animated animate__fadeInUp">-->
-<!--                <h2>About Me</h2>-->
-<!--                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at erat lorem. Curabitur eu tristique dui. Quisque suscipit, dolor vel tincidunt ullamcorper, metus neque commodo arcu, id aliquam nisl urna non erat.</p>-->
-<!--                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at erat lorem. Curabitur eu tristique dui. Quisque suscipit, dolor vel tincidunt ullamcorper, metus neque commodo arcu, id aliquam nisl urna non erat.</p>-->
-<!--                <a href="#" class="btn btn-primary animate__animated animate__fadeIn">Learn More</a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<section id="about"  class="py-5 aboutme" style="color:#ffffff;">
-    <div class="row">
-        <div class="image-container centered-section col-md-6 margin">
-            <div class="row image-flipper ">
+<section id="about"  class="py-5 aboutme" style="color:#ffffff; background-color: #0f4675">
+    <div class="row spacer">
+        <div class="image-container  centered-section col-md-6 margin">
+            <div class="row image-flipper spacer-image">
                 <div class="image-front">
                     <img src="dp/ZeelAboutMe.png" id="ZeelAboutMe" class="img-fluid image-container about-image rounded-circle" alt="Image">
 
@@ -44,15 +36,59 @@
             <h2>About Me</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at erat lorem. Curabitur eu tristique dui. Quisque suscipit, dolor vel tincidunt ullamcorper, metus neque commodo arcu, id aliquam nisl urna non erat.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at erat lorem. Curabitur eu tristique dui. Quisque suscipit, dolor vel tincidunt ullamcorper, metus neque commodo arcu, id aliquam nisl urna non erat.</p>
-            <a href="/privacypolicy" id="learnmore" class="btn btn-primary animate__animated animate__fadeIn">Learn More</a>
+            <a href="#about" id="learnmore" class="btn btn-primary animate__animated animate__fadeIn">Contact Me</a>
         </div>
+    </div>
+    <div class="graph__wrapper" style="display: none;">
+        <svg width="315px" height="107px" viewBox="0 0 315 107" version="1.1" style="overflow:visible">
+            <g  id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                <path id="Path-1" class="path" fill="none" stroke="#db5862" stroke-width="5" stroke-linejoin="round" stroke-miterlimit="10" d="M670,390 Q400,400 750,500 Q1100,580 750,625 L750,630"/>
+
+                <path class="dashed" fill="none" stroke="#0f4675" stroke-width="8" stroke-linejoin="round" stroke-miterlimit="10" d="M670,390 Q400,400 750,500 Q1100,580 750,625 L750,630"/>
+
+                <polyline id="arrow" points="0,-9 18,0 0,9 5,0" fill="#db5862">
+                    <animateMotion rotate="auto" begin="1s" dur="1s" repeatCount="1" fill="freeze">
+                        <mpath xlink:href="#Path-1" />
+                    </animateMotion>
+                </polyline>
+
+            </g>
+        </svg>
+    </div>
+</section>
+<script>
+    document.getElementById("learnmore").addEventListener("click", function() {
+        var graphWrapper = document.querySelector(".graph__wrapper");
+        if (graphWrapper.style.display === "none") {
+            graphWrapper.style.display = "block";
+            setTimeout(function() {
+                graphWrapper.style.display = "none";
+            }, 3000); // 3000 milliseconds = 3 seconds
+        } else {
+            graphWrapper.style.display = "none";
+        }
+    });
+</script>
+
+
+<section id="curve2" class="curve" style="background-color: #0f4675">
+    <div class="graph__wrapper1">
+        <svg width="100%" height="100%" fill="#1985de" style="overflow: visible;">
+            <defs>
+                <clipPath id="curve-clip">
+                    <path d="M0,40 Q200,0 400,20 Q600,40 800,20 Q1000,0 1200,20 Q1400,40 1530,20 V100 H0 V40Z"/>
+                </clipPath>
+            </defs>
+
+            <rect width="1000%" height="100%" fill="#202124" clip-path="url(#curve-clip)" />
+            <path id="Path-4" class="" fill="none" stroke="#202124" stroke-width="5" stroke-linejoin="round" stroke-miterlimit="10" d="M0,40 Q200,0 400,20 Q600,40 800,20 Q1000,0 1200,20 Q1400,40 1530,20"/>
+        </svg>
     </div>
 </section>
 
-
-<section id="projects" class="py-5 projects" >
-    <div class="container margin-less">
-        <h2 style="color: white">Portfolio</h2>
+<section id="projects" class="py-5 projects" style="background-color: #202124" >
+    <div class="container spacer margin-less">
+        <h2 style="color: white">Projects</h2>
         <div class="row margin-less">
             <div class="col-md-4 mb-4">
                 <div class="card h-100">

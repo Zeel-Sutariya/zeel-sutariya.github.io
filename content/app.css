@@ -1,5 +1,32 @@
 @media (min-width: 700px) {
 
+
+
+    .path { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: dash 1.2s linear forwards; animation-iteration-count: 1;animation-delay: 1s;}
+    @keyframes dash {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+    .dashed{
+        stroke-dasharray: 5,6;
+
+    }
+    #arrow{animation: arrow 1s linear forwards; opacity:0;}
+    @keyframes arrow {
+        to {
+            opacity: 1;
+        }
+    }
+
+    .graph__wrapper{
+        position: absolute;
+        opacity: 1;
+        transition: opacity 1s ease; /* Add the transition for opacity */
+    }
+
+
+
     /* Container to hold the image */
     .image-container {
         position: relative;
@@ -235,21 +262,39 @@
         display: flex;
         justify-content: center;
         font-family: 'Norican', cursive, sans-serif;
+
     }
 
     .aboutme {
         height: 100vh;
-        width: 96%;
+        width: 100%;
         display: flex;
     }
 
     .projects {
         height: 100vh;
-        width: 96%;
+        width: 100%;
         display: flex;
     }
 
 
+
+    .curve{
+        height: 5vh;
+        width: 100%;
+        display: flex;
+        z-index: -9999;
+        position: relative;
+    }
+
+    .spacer{
+        margin-left: 150px;
+    }
+
+    .spacer-image
+    {
+        margin-left: 0px;
+    }
 
     .margin {
         margin-top: 20vh;
@@ -294,6 +339,7 @@
         width: 100%;
         height: 280px; /* Adjust the height of the fade-out effect */
         background: linear-gradient(to top left, rgba(255, 255, 255, 0), rgb(25, 199, 222));
+        /*background: linear-gradient(to top left, rgba(255, 255, 255, 0), rgb(25, 133, 222));*/
     }
 
 
@@ -363,14 +409,106 @@ visibility: visible;
     /*}*/
 .py-5{
 }
-#myintro{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-family: 'Norican', cursive, sans-serif;
 
-}
+
+    .image-container {
+        position: relative;
+        width: 200px; /* Adjust the width to match your image size */
+        height: 200px; /* Adjust the height to match your image size */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* The flipper container */
+    .image-flipper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.6s; /* Adjust the transition speed as needed */
+
+    }
+
+    /* Front of the image */
+    .image-front,
+    .image-back {
+        position: absolute;
+        width: 200px; /* Adjust the width to match your image size */
+        height: 200px; /* Adjust the height to match your image size */
+        backface-visibility: hidden;
+
+    }
+
+    /* Back of the image (hidden by default) */
+    .image-back {
+        transform: rotateY(180deg);
+        transform-origin: center; /* Flip in place around the center */
+    }
+
+    /* Style for the text on the backside */
+    .image-back p {
+        color: #fff;
+        font-size: 24px;
+        font-family: "Cooper Black";
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Style for the icon on the backside */
+    .icon-1{
+        color: #fff;
+        font-size: 24px;
+        position: absolute;
+        margin-top: 60%;
+        margin-left: 15%;
+        /*transform: translateX(-50%);*/
+    }.icon-2{
+         color: #fff;
+         font-size: 24px;
+         position: absolute;
+         margin-top: 60%;
+         margin-left: 30%;
+         /*transform: translateX(-50%);*/
+     }.icon-3{
+          color: #fff;
+          font-size: 24px;
+          position: absolute;
+          margin-top: 60%;
+          margin-left: 45%;
+          /*transform: translateX(-50%);*/
+      }
+
+    /* Hover effect */
+    .image-container:hover .image-flipper {
+        transform: rotateY(180deg);
+    }
+
+
+    #myintro{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: 'Norican', cursive, sans-serif;
+
+    }
+
+    .spacer{
+        margin-left: 0px;
+    }
+    .spacer-image
+    {
+        margin-left: 40vw;
+    }
+
+    .curve{
+        height: 10vh;
+        width: 100%;
+        display: flex;
+    }
 
     .about-image {
         max-width: 200px;
@@ -403,6 +541,7 @@ body {
     background-color: #202124;
     cursor: none;
     overflow: auto;
+    overflow-x: hidden;
 
 }
 .centered-section {
