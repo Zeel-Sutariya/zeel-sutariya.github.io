@@ -394,7 +394,7 @@
 
     .name{
         /* Replace 'image-url.jpg' with the URL or relative path of your image */
-        background-image: url('/images/mountain.jpg');
+        background-image: url('/images/mountain.png');
         /* Set background properties like positioning, repeating, etc. */
         background-size: cover; /* This will cover the whole section with the image */
         background-repeat: no-repeat; /* This will prevent the image from repeating */
