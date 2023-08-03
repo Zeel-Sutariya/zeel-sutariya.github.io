@@ -2,9 +2,6 @@
 (function () {
     function DisplayHomePage() {
         console.log("home page called");
-        $("#AboutUsBtn").on("click", () => location.href = "about");
-        $("body").append(`<article class="container"><p id="ArticleParagraph" class="mt-3">This is Article paragraph</p> </article>`);
-        $("main").append(`<p class="mt-3" id="MainParagraph">This is jquery generated paragraph</p> `);
     }
     function LoadHeader() {
         $.get("./views/components/header.html", function (html_data) {
