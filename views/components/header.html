@@ -2,6 +2,7 @@
         <a href="#myintro"   class=" half-rounded-button">Hello</a>
         <a href="#about"   class=" half-rounded-button">About</a>
         <a href="#projects" class=" half-rounded-button">Projects</a>
+        <a href="#certificates" class=" half-rounded-button">Certificates</a>
 </div>
 <script !src="">
         $(document).ready(function() {
@@ -23,15 +24,18 @@
                 );
                 let currentsection = 0;
                 // console.log(`total slength${totalScrollLength}  cur ;en ${currentPosition} `);
-                if(currentPosition >= 0 && currentPosition <= totalScrollLength*0.21 )
+                if(currentPosition >= 0 && currentPosition <= totalScrollLength*0.11 )
                 {
                        currentsection=1;
-                }else  if(currentPosition >totalScrollLength*0.21 && currentPosition <= totalScrollLength * 0.53  )
+                }else  if(currentPosition >totalScrollLength*0.11 && currentPosition <= totalScrollLength * 0.33  )
                 {
                         currentsection=2
-                }else  if(currentPosition> totalScrollLength*0.5 )
+                }else  if(currentPosition> totalScrollLength*0.3 && currentPosition <= totalScrollLength*0.55)
                 {
                         currentsection=3;
+                }else  if(currentPosition> totalScrollLength*0.55 )
+                {
+                        currentsection=4;
                 }
                 let links =  $('.half-rounded-button');
 
