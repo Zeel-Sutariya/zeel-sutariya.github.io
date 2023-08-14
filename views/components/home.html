@@ -1,9 +1,66 @@
-<section  id="myintro" class="py-5 name animate__animated animate__fadeInDown" style="color:#1f2138;">
-
-        <p class="centered-section front">I'm Zeel Sutariya.</p>
+<section id="myintro" class="py-5 name animate__animated animate__fadeInDown">
+    <div class="switch-container">
+        <label class="switch">
+            <input id="modeToggle" type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <p class="centered-section front">I'm Zeel Sutariya.</p>
 </section>
 
-<section id="about"  class="py-5 aboutme" style="color:#ffffff; background-color: #1f2138">
+
+<script>
+    const modeToggle = document.getElementById("modeToggle");
+    const rootStyles = getComputedStyle(document.documentElement);
+    const myLightColor = rootStyles.getPropertyValue('--myLightColor');
+    const myDarkColor = rootStyles.getPropertyValue('--myDarkColor');
+    const mySuperDarkColor = rootStyles.getPropertyValue('--mySuperDarkColor');
+
+    // Select the SVG elements
+    const svg = document.querySelector("#curve1 svg");
+    const rect = svg.querySelector("rect");
+    const path = svg.querySelector("#Path-4");
+
+
+
+    const elementsWithSuperDarkTheme = document.querySelectorAll(".super-dark-theme");
+    const elementsWithDarkTheme = document.querySelectorAll(".dark-theme");
+
+    let darkcolor="#141525";
+
+    modeToggle.addEventListener("change", function () {
+        console.log("Toggle switched:", modeToggle.checked);
+        if (modeToggle.checked) {
+            elementsWithSuperDarkTheme.forEach(element => {
+                element.classList.add("super-light-theme");
+                element.classList.remove("super-dark-theme");
+            });
+            elementsWithDarkTheme.forEach(element => {
+                element.classList.add("light-theme");
+                element.classList.remove("dark-theme");
+            });
+            // Set the fill and stroke attributes using the retrieved CSS variable value
+            rect.setAttribute("fill", myLightColor);
+            path.setAttribute("stroke", myLightColor);
+        }else {
+            elementsWithSuperDarkTheme.forEach(element => {
+                element.classList.add("super-dark-theme");
+                element.classList.remove("super-light-theme");
+            });
+            elementsWithDarkTheme.forEach(element => {
+                element.classList.add("dark-theme");
+                element.classList.remove("light-theme");
+            });
+            // Set the fill and stroke attributes using the retrieved CSS variable value
+            rect.setAttribute("fill", mySuperDarkColor);
+            path.setAttribute("stroke", mySuperDarkColor);
+        }
+    });
+</script>
+
+
+
+<section id="about"  class="py-5 aboutme dark-theme" style="color: fff">
     <div class="row spacer-less">
         <div class="image-container  centered-section col-md-6 margin-image">
             <div class="row image-flipper spacer-image">
@@ -40,7 +97,7 @@
 </section>
 
 
-<section id="curve1" class="curve" style="background-color: #1f2138">
+<section id="curve1" class="curve dark-theme">
     <div class="graph__wrapper1">
         <svg width="100%" height="100%" fill="#141525" style="overflow: visible;">
             <defs>
@@ -55,9 +112,9 @@
     </div>
 </section>
 
-<section id="projects" class="py-5 projects" style="background-color: #141525" >
+<section id="projects" class="py-5 projects super-dark-theme" style="color: #212529" >
     <div class="container spacer-less ">
-        <h2 style="color: white" class="centered-section front">Projects&emsp;</h2>
+        <h2 style="color: white" class="centered-section front super-dark-theme">Projects&emsp;</h2>
         <div class="main">
             <ul class="cards">
                 <li class="cards_item">
@@ -157,9 +214,9 @@
     </div>
 </section>
 
-<section id="certificates" class="py-5 certificates" style="background-color: #1f2138" >
+<section id="certificates" class="py-5 certificates dark-theme" >
     <div class="container spacer-certi">
-        <h2 class="centered-section front" style="color: white">Certificates&emsp;&emsp;&emsp;&emsp;</h2>
+        <h2 class="centered-section front dark-theme" >Certificates&emsp;&emsp;&emsp;&emsp;</h2>
         <div class="row margin-less">
             <div class="col-md-4 mb-4">
                 <div class="card-certificate">
