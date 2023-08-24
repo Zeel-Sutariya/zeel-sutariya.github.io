@@ -1,5 +1,41 @@
 @media (min-width: 700px) {
 
+    /* CSS for the project navigation buttons */
+    #prev-button,
+    #next-button {
+        background-color: transparent;
+        border: 1px solid #fff; /* Add a border for visibility */
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #prev-button:hover,
+    #next-button:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Add a slight background on hover */
+    }
+    /*end*/
+
+    /* CSS for the projects container and visible projects */
+    .projects-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .visible-projects {
+        display: flex;
+        overflow: hidden;
+    }
+
+    /* Adjust the width of each project card */
+    .cards_item {
+        flex: 0 0 calc(33.33% - 20px);
+        margin: 0 10px;
+        width: auto;
+    }
+    /*end*/
+
     /* Toggle Switch */
 
     /* Position the toggle switch in the top right corner */
