@@ -1097,6 +1097,26 @@ visibility: visible;
         align-items: center;
 
     }
+    /* Add a class to the body to switch themes */
+    .light-theme {
+        background-color: #fff;
+        color: #1f2138 !important;
+    }
+
+    .super-light-theme{
+        background-color: #dcecfa;
+        color: #1f2138 !important;
+    }
+
+
+    .dark-theme {
+        background-color: #1f2138;
+        color: #fff;
+    }
+    .super-dark-theme {
+        background-color: #141525;
+        color: #fff;
+    }
 }
 
 body {
