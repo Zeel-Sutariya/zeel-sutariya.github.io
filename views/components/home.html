@@ -1,4 +1,5 @@
-<section id="myintro" class="py-5 name animate__animated animate__fadeInDown">
+<div class="section-container" id="section-container">
+<section id="myintro" class="section py-5 name animate__animated animate__fadeInDown">
     <div class="switch-container">
 <!--        <label class="switch">-->
 <!--            <input id="modeToggle" type="checkbox">-->
@@ -9,58 +10,7 @@
 </section>
 
 
-<!--<script>-->
-<!--    const modeToggle = document.getElementById("modeToggle");-->
-<!--    const rootStyles = getComputedStyle(document.documentElement);-->
-<!--    const myLightColor = rootStyles.getPropertyValue('&#45;&#45;myLightColor');-->
-<!--    const myDarkColor = rootStyles.getPropertyValue('&#45;&#45;myDarkColor');-->
-<!--    const mySuperDarkColor = rootStyles.getPropertyValue('&#45;&#45;mySuperDarkColor');-->
-
-<!--    // Select the SVG elements-->
-<!--    const svg = document.querySelector("#curve1 svg");-->
-<!--    const rect = svg.querySelector("rect");-->
-<!--    const path = svg.querySelector("#Path-4");-->
-
-
-
-<!--    const elementsWithSuperDarkTheme = document.querySelectorAll(".super-dark-theme");-->
-<!--    const elementsWithDarkTheme = document.querySelectorAll(".dark-theme");-->
-
-<!--    let darkcolor="#141525";-->
-
-<!--    modeToggle.addEventListener("change", function () {-->
-<!--        console.log("Toggle switched:", modeToggle.checked);-->
-<!--        if (modeToggle.checked) {-->
-<!--            elementsWithSuperDarkTheme.forEach(element => {-->
-<!--                element.classList.add("super-light-theme");-->
-<!--                element.classList.remove("super-dark-theme");-->
-<!--            });-->
-<!--            elementsWithDarkTheme.forEach(element => {-->
-<!--                element.classList.add("light-theme");-->
-<!--                element.classList.remove("dark-theme");-->
-<!--            });-->
-<!--            // Set the fill and stroke attributes using the retrieved CSS variable value-->
-<!--            rect.setAttribute("fill", myLightColor);-->
-<!--            path.setAttribute("stroke", myLightColor);-->
-<!--        }else {-->
-<!--            elementsWithSuperDarkTheme.forEach(element => {-->
-<!--                element.classList.add("super-dark-theme");-->
-<!--                element.classList.remove("super-light-theme");-->
-<!--            });-->
-<!--            elementsWithDarkTheme.forEach(element => {-->
-<!--                element.classList.add("dark-theme");-->
-<!--                element.classList.remove("light-theme");-->
-<!--            });-->
-<!--            // Set the fill and stroke attributes using the retrieved CSS variable value-->
-<!--            rect.setAttribute("fill", mySuperDarkColor);-->
-<!--            path.setAttribute("stroke", mySuperDarkColor);-->
-<!--        }-->
-<!--    });-->
-<!--</script>-->
-
-
-
-<section id="about"  class="py-5 aboutme dark-theme" style="color: #ffffff">
+<section id="about"  class="section py-5 aboutme dark-theme" style="color: #ffffff">
     <div class="row spacer-less">
         <div class="image-container  centered-section col-md-6 margin-image">
             <div class="row image-flipper spacer-image">
@@ -97,7 +47,7 @@
 </section>
 
 
-<section id="curve1" class="curve dark-theme">
+<section id="curve1" class="section curve dark-theme">
     <div class="graph__wrapper1">
         <svg width="100%" height="100%" fill="#141525" style="overflow: visible;">
             <defs>
@@ -112,7 +62,7 @@
     </div>
 </section>
 
-<section id="projects" class="py-5 projects super-dark-theme" style="color: #212529" >
+<section id="projects" class="section py-5 projects super-dark-theme" style="color: #212529" >
     <div class="container spacer-less ">
         <h2 style="color: white" class="centered-section front super-dark-theme">Projects&emsp;</h2>
         <div class="main">
@@ -271,7 +221,7 @@
 
 </script>
 
-<section id="curve2" class="curve" style="background-color: #141525">
+<section id="curve2" class="section curve" style="background-color: #141525">
     <div class="graph__wrapper1">
         <svg width="100%" height="100%" fill="#1f2138" style="overflow: visible;">
             <defs>
@@ -286,8 +236,8 @@
     </div>
 </section>
 
-<section id="certificates" class="py-5 certificates dark-theme" >
-    <div class="container spacer-certi">
+<section id="certificates" class="section py-5 certificates dark-theme" >
+    <div class="container spacer-certi margin-less">
         <h2 class="centered-section front dark-theme" >Certificates&emsp;&emsp;&emsp;&emsp;</h2>
         <div class="container spacer-less">
             <div class="certi-container">
@@ -571,7 +521,7 @@
     updateCertiDisplay();
 
 </script>
-
+</div>
 <section id="curve3" class="curve" style="background-color: #1f2138">
     <div class="graph__wrapper1">
         <svg width="100%" height="100%" fill="#141525" style="overflow: visible;">

@@ -24,6 +24,10 @@
                         document.body.scrollHeight
                 );
                 let currentsection = 0;
+                const IntroSection = document.getElementById("myintro");
+                const AboutSection = document.getElementById("about");
+                const ProjectSection = document.getElementById("projects");
+                const CertiSection = document.getElementById("certificates");
                 // console.log(`total slength${totalScrollLength}  cur ;en ${currentPosition} `);
                 if(currentPosition >= 0 && currentPosition <= totalScrollLength*0.11 )
                 {
@@ -50,7 +54,6 @@
                         else
                         {
                                 $(links[i]).removeClass('nav-active')
-
                         }
 
 
